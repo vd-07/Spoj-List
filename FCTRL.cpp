@@ -6,13 +6,15 @@ using namespace std;
 #define f(i,s,e) for(int i=s;i<e;i++)
 #define test ll t;cin>>t;while(t--)
 #define mod 1000000007
-void solve(){
-    int n;
+void solve(){ 
+    ll n;
     cin>>n;
-    int k=n/3+1;
-    // if(n==3)
-    // cout<<1<<endl;
-    cout<<(1-n%2)<<"\n";
+    ll res=0,k=5;
+    while(k<=n){
+        res+=n/k;
+        k*=5;
+    }
+    cout<<res<<"\n";
 }
 
 int main(){
